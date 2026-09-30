@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Preenchedor Automático SICAD",
+  "version": "4.7",
+  "description": "Preenche Nota e Classificação no SICAD com padrão de nota por ponto (.) e leitura alfanumérica desconsiderando caracteres especiais.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ]
+}
